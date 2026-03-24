@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-pink-50: #fdf2f8;
+    --color-pink-100: #fce7f3;
+    --color-pink-200: #fbcfe8;
+    --color-pink-500: #ec4899;
+    --color-pink-600: #db2777;
+    --color-pink-800: #9d174d;
+    --color-pink-950: #500724;
+    --color-pink-blob: #ff6b9a; 
+    --color-text-dark: var(--color-pink-950);
+    --color-text-light: var(--color-pink-800);
+    --color-bg-main: var(--color-pink-50);
+  }
+  
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: linear-gradient(135deg, #fce4ec 0%, #f77fbe 50%, #fce4ec 100%);
+    background-size: 400% 400%;
+    animation: shimmer 15s ease infinite;
+    background-attachment: fixed;
+    color: var(--color-text-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .text-holographic {
+    background: linear-gradient(
+      to right,
+      #ec4899 20%,
+      #8b5cf6 40%,
+      #ec4899 60%,
+      #3b82f6 80%,
+      #ec4899 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hologram 4s linear infinite;
+    text-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+  }
+
+  .hologram-scanlines {
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(236, 72, 153, 0.05) 50%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+  }
+
+  @keyframes hologram {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
