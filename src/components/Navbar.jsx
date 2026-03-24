@@ -9,6 +9,7 @@ const Navbar = () => {
       <div className="hidden md:flex space-x-6 lg:space-x-12 text-sm font-bold">
         {[
           { name: 'About', href: '#about' },
+          { name: 'Skills', href: '#skills' },
           { name: 'Projects', href: '#projects' },
           { name: 'Contacts', href: '#contacts' }
         ].map((item) => (
