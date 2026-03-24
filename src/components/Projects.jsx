@@ -68,15 +68,39 @@ const Projects = () => {
       name: 'TalentSync',
       description: 'An AI-driven recruitment platform using Django and DRF for scalable backend APIs. Integrated Google Gemini API to generate resume match scores and explain candidate-job fit.',
       tags: ['django', 'python', 'google-gemini', 'pypdf2'],
-      source_code_link: 'https://github.com/kriti2010',
+      source_code_link: 'https://github.com/kriti2010/resume_analyzer',
       image: '/projects/talentsync.png'
+    },
+    {
+      id: 'rag-chatbot',
+      name: 'RAG Document Chatbot',
+      description: 'Sophisticated intelligent assistant built with Retrieval-Augmented Generation. Enables real-time conversational Q&A over massive document sets with high accuracy and source attribution.',
+      tags: ['python', 'openai', 'langchain', 'vector-db'],
+      source_code_link: 'https://github.com/kriti2010/rag_document_chatbot',
+      image: '/projects/rag_chatbot.png'
+    },
+    {
+      id: 'object-detection',
+      name: 'Real-Time Object Detection',
+      description: 'High-performance computer vision system using YOLOv8 for identifying and tracking multiple object classes in live video streams with high precision and low latency.',
+      tags: ['python', 'yolov8', 'opencv', 'pytorch'],
+      source_code_link: 'https://github.com/kriti2010/realtime_object_detection',
+      image: '/projects/object_detection.png'
+    },
+    {
+      id: 'face-recognition',
+      name: 'Zero-Shot Face Recognition',
+      description: 'Advanced identity verification system leveraging zero-shot learning to recognize individuals without prior training. Combines deep metric learning with biometric analysis.',
+      tags: ['python', 'deep-learning', 'biometrics', 'zero-shot'],
+      source_code_link: 'https://github.com/kriti2010/zero_shot_face_recognition',
+      image: '/projects/face_recognition.png'
     },
     {
       id: 'smart-parking',
       name: 'Smart Parking System',
       description: 'A high-performance parking system using Java backend and responsive web frontend. Applied DSA to achieve O(1) slot allocation and lookup. Developed real-time dashboard.',
       tags: ['java', 'javascript', 'html', 'css'],
-      source_code_link: 'https://github.com/kriti2010',
+      source_code_link: 'https://github.com/kriti2010/smart-parking-system',
       image: '/projects/parking.png'
     }
   ];
@@ -87,7 +111,13 @@ const Projects = () => {
       .then(data => {
         if(Array.isArray(data)) {
             // Filter out forks or empty repos and block duplicates of mandatory projects
-            const excludeNames = ['talentsync', 'talent-sync', 'smart-parking-system', 'smart_parking_system', 'smart parking system'];
+            const excludeNames = [
+              'talentsync', 'talent-sync', 'resume_analyzer', 
+              'smart-parking-system', 'smart_parking_system', 'smart parking system',
+              'rag_document_chatbot', 'rag-chatbot',
+              'realtime_object_detection', 'object-detection',
+              'zero_shot_face_recognition', 'face-recognition'
+            ];
             const githubProjects = data
               .filter(repo => !repo.fork && !excludeNames.includes(repo.name.toLowerCase()))
               .map(repo => ({
