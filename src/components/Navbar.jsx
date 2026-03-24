@@ -9,13 +9,12 @@ const Navbar = () => {
       <div className="hidden md:flex space-x-6 lg:space-x-12 text-sm font-bold">
         {[
           { name: 'About', href: '#about' },
-          { name: 'Skills', href: '#skills' },
           { name: 'Projects', href: '#projects' },
           { name: 'Contacts', href: '#contacts' }
         ].map((item) => (
-          <a 
+          <a
             key={item.name}
-            href={item.href} 
+            href={item.href}
             className="text-pink-900 hover:text-pink-600 transition-all uppercase tracking-widest text-[11px] relative group px-2 py-1"
           >
             {item.name}
