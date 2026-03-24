@@ -69,7 +69,7 @@ const Projects = () => {
       description: 'An AI-driven recruitment platform using Django and DRF for scalable backend APIs. Integrated Google Gemini API to generate resume match scores and explain candidate-job fit.',
       tags: ['django', 'python', 'google-gemini', 'pypdf2'],
       source_code_link: 'https://github.com/kriti2010',
-      image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=2070&auto=format&fit=crop'
+      image: '/projects/talentsync.png'
     },
     {
       id: 'smart-parking',
@@ -77,7 +77,7 @@ const Projects = () => {
       description: 'A high-performance parking system using Java backend and responsive web frontend. Applied DSA to achieve O(1) slot allocation and lookup. Developed real-time dashboard.',
       tags: ['java', 'javascript', 'html', 'css'],
       source_code_link: 'https://github.com/kriti2010',
-      image: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=2070&auto=format&fit=crop'
+      image: '/projects/parking.png'
     }
   ];
 
