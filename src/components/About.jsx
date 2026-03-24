@@ -31,15 +31,15 @@ const About = () => {
           <p className="mb-6">
             Curious by nature and focused on impact, I aim to design AI solutions that are not only innovative, but also efficient, scalable, and practical.
           </p>
-          <motion.a 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <a 
             href="/Kriti_Gautam_CV.pdf" 
             download="Kriti_Gautam_CV.pdf"
-            className="inline-block mt-2 bg-pink-600 text-white px-10 py-4 rounded-2xl text-sm font-bold shadow-xl shadow-pink-200 hover:bg-pink-700 transition-all"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-2 bg-pink-600 text-white px-10 py-4 rounded-2xl text-sm font-bold shadow-xl shadow-pink-200 hover:bg-pink-700 transition-all cursor-pointer"
           >
             Download CV
-          </motion.a>
+          </a>
         </motion.div>
         
         <motion.div 
