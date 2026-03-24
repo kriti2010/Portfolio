@@ -22,7 +22,7 @@ const Education = () => (
           <div className="absolute -left-[42px] w-6 h-6 bg-pink-500 rounded-full border-4 border-pink-50 shadow-sm"></div>
           <h3 className="text-2xl font-bold text-pink-950">Bachelor of Technology (CSE)</h3>
           <p className="text-pink-600 font-medium mt-1 text-lg">Lovely Professional University | Aug 2023 - Present</p>
-          <p className="text-pink-900 text-sm mt-3 font-bold bg-pink-100 inline-block px-4 py-2 rounded-full shadow-sm border border-pink-200">CGPA: 8.48</p>
+          <p className="text-pink-900 text-sm mt-3 font-bold bg-pink-100 inline-block px-4 py-2 rounded-full shadow-sm border border-pink-200">CGPA: 7.31</p>
         </motion.div>
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
