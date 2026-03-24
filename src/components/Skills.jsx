@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Tilt } from "react-tilt";
+import Tilt from "react-parallax-tilt";
 
 const skillCategories = [
   {
@@ -88,11 +88,10 @@ const Skills = () => {
                   className="w-24 flex flex-col items-center group"
                 >
                   <Tilt
-                    options={{
-                      max: 45,
-                      scale: 1,
-                      speed: 450,
-                    }}
+                    tiltMaxAngleX={45}
+                    tiltMaxAngleY={45}
+                    scale={1}
+                    transitionSpeed={450}
                     className="w-24 h-24 md:w-28 md:h-28 bg-gradient-to-br from-pink-100 to-pink-50 rounded-3xl flex items-center justify-center p-6 border-2 border-pink-200 shadow-xl shadow-pink-200/20 cursor-pointer group-hover:border-pink-400 transition-colors"
                   >
                     <img

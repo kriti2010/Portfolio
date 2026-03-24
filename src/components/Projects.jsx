@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Tilt } from 'react-tilt';
+import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 
@@ -12,11 +12,10 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
+        tiltMaxAngleX={45}
+        tiltMaxAngleY={45}
+        scale={1}
+        transitionSpeed={450}
         className='bg-pink-100/40 backdrop-blur-md p-5 rounded-3xl sm:w-[360px] w-full border border-pink-200 shadow-xl hover:shadow-2xl hover:border-pink-400 transition-all duration-300'
       >
         <div className='relative w-full h-[230px] overflow-hidden rounded-2xl'>

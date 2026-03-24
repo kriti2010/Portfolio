@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tilt } from 'react-tilt';
+import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 
 const CertificateCard = ({ index, name, issuer, date, imagePath }) => {
@@ -7,7 +7,10 @@ const CertificateCard = ({ index, name, issuer, date, imagePath }) => {
     <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }}>
       <a href={imagePath} target="_blank" rel="noreferrer" className="block">
         <Tilt
-          options={{ max: 15, scale: 1.02, speed: 400 }}
+          tiltMaxAngleX={15}
+          tiltMaxAngleY={15}
+          scale={1.02}
+          transitionSpeed={400}
           className='bg-pink-100/40 backdrop-blur-md p-4 md:p-5 rounded-2xl w-full border border-pink-200 shadow-xl relative overflow-hidden group cursor-pointer hover:shadow-2xl hover:shadow-pink-300/30 transition-all'
         >
           <div className='absolute z-0 w-32 h-32 bg-pink-300 rounded-full blur-3xl opacity-10 -top-10 -right-10'></div>
